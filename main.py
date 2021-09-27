@@ -57,7 +57,7 @@ class DownloadFrame:
     def MyUiLayout(self):
         downloadSizer = wx.BoxSizer(wx.HORIZONTAL)
         # Process Bar
-        self.processBar = PG.PyGauge(self.panel, size=(350, 20))
+        self.processBar = PG.PyGauge(self.panel, size=(350, 30))
         self.processBar.SetBackgroundColour(wx.WHITE)
         self.processBar.SetBorderColor(wx.BLACK)
         self.processBar.SetBarColour(wx.GREEN)
@@ -68,7 +68,7 @@ class DownloadFrame:
         downloadSizer.Add(serial, 0, flag=wx.RIGHT | wx.LEFT, border=8)
 
         # Serial select
-        self.serialSelect = wx.ComboBox(self.panel, wx.ID_ANY, size=(150, 20))
+        self.serialSelect = wx.ComboBox(self.panel, wx.ID_ANY, size=(150, 30))
         downloadSizer.Add(self.serialSelect, 0, flag=wx.RIGHT | wx.LEFT, border=8)
 
         self.sizer.Add(downloadSizer, 0, flag=wx.TOP, border=30)
@@ -159,11 +159,11 @@ class MyFrame(wx.Frame):
         sizerTargetFile.Add(etargetFile,0,flag=wx.RIGHT | wx.LEFT, border=8)
 
         #Edit text
-        self.text_ctrl = wx.TextCtrl(self.panel, wx.ID_ANY, size=(400, 20))
+        self.text_ctrl = wx.TextCtrl(self.panel, wx.ID_ANY, size=(400, 30))
         sizerTargetFile.Add(self.text_ctrl,flag=wx.RIGHT | wx.LEFT,border=0)
 
         #Button open file
-        BtFileOpen = wx.Button(self.panel,label='OPEN',id=wx.ID_ANY,size=(50,20))
+        BtFileOpen = wx.Button(self.panel,label='OPEN',id=wx.ID_ANY,size=(50,30))
         sizerTargetFile.Add(BtFileOpen,0,flag=wx.RIGHT | wx.LEFT,border=20)
         BtFileOpen.Bind(wx.EVT_BUTTON, self.fileOpenHandle)
 
